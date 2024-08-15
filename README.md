@@ -307,7 +307,7 @@ print(num_float)  # Output: 10.0
 ```
 
 --- 
-# Input in python
+## Input in python
 - Inputs can be taken using `input()` function in python.
 - `input()` can take at most one argument of str type.
 - `input()` always return string type values.
@@ -464,4 +464,100 @@ f.close()
 f = open("myFile.txt", "a") # appending into file
 f.write(" This is new code written using the python")
 f.close()
+```
+
+---
+## Python Loops
+
+- Python has two primitive loop commands:
+
+1. while loops
+2. for loops
+
+### The while Loop
+
+- With the while loop we can execute a set of statements as long as a condition is true.
+
+```py
+count = 0
+while(count <= 5):
+    print(count, " Ankit") # 6 times Ankit
+    count+=1
+
+# break statement
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    break
+  print(i) # 0 1 2
+
+#continue statement
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue # 3 will be skiped from iteration
+  print(i) # 0 1 2 4 5
+```
+- Here, `break` is a keyword which is used to stop the loop and transfer the control to outside the loop.
+- `continue` is also a keyword used to skip that particular iteration.
+- `pass` keyword is used to create empty block
+```py
+if condition:
+    pass
+
+#example 2
+while(condition):
+```
+
+- ***Note:***: `while loop` is used when no. of iteration unknown.
+
+### For loop
+
+- A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+
+```py
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+```
+
+- The `for` loop does not require an indexing variable to set beforehand.
+
+***Note:*** `for` loop is mainly used when no. of iterations is known.
+
+- We can also use `else` with `for` and `while` loop.
+```py
+for x in range(6):
+  if x == 3: break
+  print(x)
+else:
+  print("Finally finished!")
+```
+**Note**: The else block will NOT be executed if the loop is stopped by a break statement.
+
+### What are iterables?
+An itreaalbe is something that contains a countable number of values.
+
+*Technically,* In python an iterator is an object which implements the operator protocol which consists of mehtods `__iter__()` and `__next__()`
+
+examples of iterables:
+1. range
+2. list
+3. tuple
+4. dict, etc.
+
+## Range
+- it is a class.
+- Immutable sequence.
+- contains only `int` type values.
+- it contains a sequance with comman difference.
+- These are indexed elements.
+
+```py
+# range(start,end,step)
+r1 = range(1, 30, 2) #here third parameter is optional and by default it is 1
+for x in r1:
+    print(x)
 ```
