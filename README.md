@@ -283,8 +283,113 @@ from operations import sum as add
 ```
 
 ### keywords
-- Keywords are the predefine keywords in python.
+- Keywords are the predefine words in python.
 - example: false,name, class, or, try, etc
 
+---
+## Type conversion
+- There is mainly two type converions
+1. **Implicit conversion:** Automatic conversion.
+```py
+a = 10 #int
+b = 10.5 #float
+print(a + b) # float --> 20.5
+```
 
+2. **Explicit conversion:** Forcefully conversion.
+```py
+num_str = "10"
+num_int = int(num_str)
+print(num_int)  # Output: 10
 
+num_float = float(num_str)
+print(num_float)  # Output: 10.0
+```
+
+--- 
+# Input in python
+- Inputs can be taken using `input()` function in python.
+- `input()` can take at most one argument of str type.
+- `input()` always return string type values.
+
+```py
+x = (input("Enter value of X"))
+y = int(input("Enter value of Y"))
+z = float(input())
+comp = complex(input())
+
+print(type(x), type(y), type(z), type(comp)) #<class 'str'> <class 'int'> <class 'float'> <class 'complex'>
+print(x) #Ankit Choubey
+```
+---
+## Operators in python
+### 1.Arithmetic operator
+- +,-, *, **,,//, /,%
+- **Division** `/`: this will always give result in float.
+- **Floor division** `//`: result in always floor value and if any operand is float then ans will be in float.
+
+```py
+print(17/2) # 8.5
+print(17//2)# 8
+```
+
+### 2. Relational operators
+- <=, >=, !=, ==, etc
+
+### 3. Logical operators
+- and, or, not
+- Logical operators should be wrtiten in ***lowercase***
+```py
+# Logical operator
+print('logical operator')
+print(not True)
+print(not 0)
+```
+
+### 3. Bitwise operators
+- Bitwise mainly deals with the binary numbers
+- &, |, ~, ^ (xor), >>, <<
+
+```py
+#Bitwise and
+0&0 -> 0
+0&1 -> 1
+1&1 -> 1
+1&0 ->0
+#Bitwise or
+0|0 ->0
+0|1 ->1
+1|1 ->1
+1|0 ->1
+
+# Bitwise xor: here if both values are oppsite then result will be 1
+0^0 -> 0
+0^1 ->1
+1^1 ->0
+1^0 ->1
+```
+## 4. Assisgnment operator
+- =, +=, -=, *=,etc.
+- Left side always consist a variable. `a *= 5`
+
+## 5. Identity operator
+- `is`, `is not`
+- Here, `is` manly compare object Id of variables.
+- `x is y`
+```py
+x = 34
+y = 34
+
+print(x is y) #true
+```
+
+## 6. Membership operator
+- `in`, `not in`.
+- To use membership operator there is some condition.
+- These operator are applicable only on container(iterables).
+- They result True or False value.
+```py
+# membership operator
+list = [12,23,54,65]
+print('is 23 is present?',23 in list) #true
+```
