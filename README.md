@@ -414,3 +414,54 @@ match x:
 ```
 
 - **Note:** `break` keyword connot be used in match block.
+
+---
+## File Handling
+
+- The key function for working with files in Python is the open() function.
+
+- The `open()` function takes two parameters; **filename**, and **mode**.
+
+- There are four different methods (modes) for opening a file:
+1. "r" - Read - Default value. Opens a file for reading, error if the file does not exist
+
+2. "a" - Append - Opens a file for appending, creates the file if it does not exist
+
+3. "w" - Write - Opens a file for writing, creates the file if it does not exist
+
+4. "x" - Create - Creates the specified file, returns an error if the file exists
+
+In addition you can specify if the file should be handled as binary or text mode
+
+- "t" - Text - Default value. Text mode
+
+- "b" - Binary - Binary mode (e.g. images)
+
+### Reading from file
+```py
+f = open("demofile.txt", "r")
+print(f.read())
+```
+- It will give you an error if the file is not found.
+
+### Creating file
+```py
+#create 
+f = open("myFile.txt", "x") # creating file
+f.close()
+```
+
+### writing file
+```py
+f = open("myFile.txt", "w") # write will overwrite the content of the file
+f.write("This is something which is written using python file write funtion.")
+f.close()
+```
+
+### appending file
+```py
+# append 
+f = open("myFile.txt", "a") # appending into file
+f.write(" This is new code written using the python")
+f.close()
+```

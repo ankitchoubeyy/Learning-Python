@@ -1,0 +1,1 @@
+This is something which is written using python file write funtion.
