@@ -368,11 +368,11 @@ print(not 0)
 1^1 ->0
 1^0 ->1
 ```
-## 4. Assisgnment operator
+### 4. Assisgnment operator
 - =, +=, -=, *=,etc.
 - Left side always consist a variable. `a *= 5`
 
-## 5. Identity operator
+### 5. Identity operator
 - `is`, `is not`
 - Here, `is` manly compare object Id of variables.
 - `x is y`
@@ -383,7 +383,7 @@ y = 34
 print(x is y) #true
 ```
 
-## 6. Membership operator
+### 6. Membership operator
 - `in`, `not in`.
 - To use membership operator there is some condition.
 - These operator are applicable only on container(iterables).
@@ -393,3 +393,24 @@ print(x is y) #true
 list = [12,23,54,65]
 print('is 23 is present?',23 in list) #true
 ```
+---
+## Control Statements
+![control statemets](./controlStatements.png)
+
+### Match statement
+- Match statement is very similar to `switch` case in c, C++
+```py
+x = int(input("Enter number: "))
+
+match x:
+    case 1:
+        print("one")
+    case 2:
+        print("Two")
+    case 3:
+        print("Three")
+    case 4:
+        print("Four")
+```
+
+- **Note:** `break` keyword connot be used in match block.
