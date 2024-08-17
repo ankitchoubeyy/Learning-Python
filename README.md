@@ -561,3 +561,5 @@ r1 = range(1, 30, 2) #here third parameter is optional and by default it is 1
 for x in r1:
     print(x)
 ```
+
+> For more notes please refer to **w3Schools.com**
